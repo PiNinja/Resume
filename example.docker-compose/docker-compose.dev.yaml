@@ -1,0 +1,12 @@
+version: '3'
+services:
+  resume:
+    build: 
+      context: ./src
+      dockerfile: dockerfile-dev
+    container_name: "resume-dev"
+    volumes:
+      - ./src/gatsby:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:80
