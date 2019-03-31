@@ -18,13 +18,16 @@ const SEO = (props) => (
             }
         `}
         render={({ site: { siteMetadata: seo } }) => {
-            const title = props.title || seo.title;
-            const description = props.description || seo.description;
+            const meta = props.meta || {}
+            let title = meta.name || seo.title;
+            title = props.section? title +' | '+props.section:title;
+            const description = meta.summary || seo.description;
             const url = props.siteUrl || seo.siteUrl;
             const image = props.image || seo.image;
 
             return (
                 <Helmet>
+                    <html lang={props.lang} />
                     <meta charset="utf-8"></meta>
                     <title>{title}</title>
                     <meta name="description" content={description} />
