@@ -11,9 +11,11 @@ export default ({pageContext}) => {
       <Header lang={pageContext.lang} section={pageContext.section}/>
       <main>
       {Object.keys(pageContext.data).map(s=>
-      <section>
+      <section key={`section-${pageContext.lang}-${s}`}>
         <h2>{s}</h2>
-        {pageContext.data[s].map((line,i)=><Main object={pageContext.data[s][i]} />)}
+        {pageContext.data[s].map((line,i)=>
+          <Main key={`section-${pageContext.lang}-${s}-${line.title}`} object={line} />
+        )}
         
       </section>)}
       </main>

@@ -286,8 +286,8 @@
               "HTML5",
               "React/Redux/Router",
               "Javascript(ES5,ES6,ES7)",
-              "Svelte/sapper",
-              "CSS2/3/4",
+              "Gatsby",
+              "CSS2/3/4, SCSS",
               "JQuery"
             ],
             "cardType": "Skillset"
@@ -295,14 +295,24 @@
           {
             "title": "Backend",
             "subskills": [
-              "Administration de serveur Dédié/virtuel",
               "Linux/Apache/MYSQL/PHP stack",
-              "Mongo/Express/Node stack",
-              "Bases de données SQL et NoSQL",
-              "Erlang/Elixir/Phoenix",
-              "Déploiement continue (Git, Docker)",
-              "certificationSSL"
+              "Express/Node stack",
+              "Erlang/Elixir/Phoenix (notions)"
             ],
+            "cardType": "Skillset"
+          },
+          {
+            "title": "DevOps",
+            "subskills": [
+              "Administration de serveur Dédié/virtuel linux",
+              "Déploiement continue (Git, Docker, Docker-compose)",
+              "certification SSL et reverse DNS"
+            ],
+            "cardType": "Skillset"
+          },
+          {
+            "title":"Traitement des données",
+            "subskills":["bases de données SQL/NoSQL","R","SAS","Python"],
             "cardType": "Skillset"
           },
           {
@@ -317,18 +327,13 @@
             "cardType": "Skillset"
           },
           {
-            "title":"Traitement des données",
-            "subskills":["R","SAS","Python","Hadoop","bases de données SQL/NoSQL"],
-            "cardType": "Skillset"
-          },
-          {
             "title": "Audio/Video/Photo",
             "subskills": [
               "transcodage video",
-              "camera reflex et sans-mirroir",
+              "caméra reflex et sans-mirroir",
               "captation audio/video/photo",
-              "suite adobe (Lightroom, illustrator, photoshop)",
-              "Studio preparation",
+              "suite Adobe (Lightroom, illustrator, photoshop)",
+              "préparation de Studio et éclairage",
               "lighting configuration and shooting"
             ],
             "cardType": "Skillset"
@@ -338,14 +343,14 @@
           {
             "date": "2014, actuel",
             "title": "Tech Ninja, Développeur principal pour la chaire de recherche du Canada sur les Écritures Numériques",
-            "description": "Développement de plateformes web spécialisées pour les chercheurs de la chaire.\nInclus des développement en PHP/MySQL/HTML5 ainsi que Node.js/Sails.js/React/Redux et gestion de données formattées en XML/JSON/YaML",
+            "description": "Développement de plateformes web spécialisées pour les chercheurs de la chaire.\nInclus des développements en PHP/MySQL/HTML5, Node.js/Sails.js/React/Redux, GraphQL/React/Gatsby ainsi que gestion de données formatées en XML/JSON/YaML",
             "city": "Montréal, Qc, Canada",
             "cardType": "Experience"
           },
           {
             "date": "2014, 2017",
             "title": "Directeur de la technologie chez Launchleap",
-            "description": "Développement de la preuve de concept initiale d'une application de sondage/socio-innovation jusqu'à une plateforme SaaS utilisable par nos clients.\nGestion de projet Agile et formation de l'équipe de développeurs\nDeveloppement full-stack en PHP/MySQL/HTML5\nSysAdmin LAMP + sécurisation serveur",
+            "description": "Développement de la preuve de concept initiale d'une application de sondage/socio-innovation jusqu'à une plateforme SaaS utilisable par nos clients.\nGestion de projet Agile et formation de l'équipe de développeurs\nDéveloppement full-stack en PHP/MySQL/HTML5\nSysAdmin LAMP + sécurisation serveur",
             "city": "Montréal, Qc, Canada",
             "cardType": "Experience"
           },
@@ -359,14 +364,14 @@
           {
             "date": "2011 (6 mois)",
             "title": "Technicien chez Canal+",
-            "description": "Technicien pour la chaine de télévision française Canal+\nCablage et preparation des invités",
+            "description": "Technicien pour la chaine de télévision française Canal+\nCâblage et preparation des invités",
             "city": "Paris, France",
             "cardType": "Experience"
           },
           {
             "date": "2010, 2011",
             "title": "Démonstrateur de jeux, Sony Computer Entertainment Europe",
-            "description": "logistique et installation des stands Playstation dans les salons de jeux-vidéo\nGamer feedback gathering and reporting.\nWorked mostly with Playsation Move and Gran Turismo 5",
+            "description": "logistique et installation des stands Playstation dans les salons de jeux vidéo\nCollecte de retour d'expérience des joueurs et soumission de rapports.\nPrincipalement travaillé sur les projets Gran Turismo 5 et Playstation move",
             "city": "Paris, France",
             "cardType": "Experience"
           }
@@ -410,10 +415,9 @@
           },
           {
               "title": "YamlEditor",
-              "description": "Editeur YAML pour le journal scientifique Sens-Public. Permet l'enrichissement des articles et s'assure que les fichiers YaML sont formatés correctement. Réalisé grâce à react/redux, JS-Yaml",
+              "description": "Editeur YAML pour le journal scientifique Sens-Public. Permet l'enrichissement des articles et s'assure que les fichiers YaML soient formatés correctement. Réalisé grâce à react/redux, JS-Yaml",
               "cadre": "Chaire de recherche du Canada sur les Écritures Numériques",
-              "version": "Production",
-              "link": "https://yaml.14159.ninja",
+              "version": "Production via stylo",
               "cardType": "Project"
           },
           {
@@ -422,9 +426,7 @@
               "cadre": "Chaire de recherche du Canada sur les Écritures Numériques",
               "version": "Production",
               "exemples": [
-                  "http://ecrituresnumeriques.ca/fr/",
-                  "http://technes.org/fr/",
-                  "http://biocultura.ca/fr/"
+                  "http://ecrituresnumeriques.ca/fr/"
               ],
               "link": "https://github.com/EcrituresNumeriques/Lightium",
               "cardType": "Project"
@@ -435,7 +437,10 @@
             "title": "Stylo.js",
             "description": "Plateforme d'édition pour les universitaires. Éditeur WYSIWYM (What you see is what you mean) avec intégration des meta-données et des références bibliographiques directement dans le texte. Support de multiple format de fichier en sortie afin de satisfaire les besoins des maîtrises, thèses et articles scientifiques.",
             "cadre": "Chaire de Recherche du Canada sur les Écritures Numériques",
-            "version": "v.0.3.0",
+            "version": "v.0.9.1",
+            "exemples": [
+              "http://alpha.stylo.14159.ninja"
+            ],
             "link": "https://github.com/EcrituresNumeriques/stylo",
             "cardType": "Project"
           },
@@ -448,11 +453,14 @@
             "cardType": "Project"
           },
           {
-            "title": "Me.js",
-            "description": "Aprés avoir cherché un générateur de CV en ligne, j'ai décidé d'en faire un moi-même en utilisant React/Redux.",
+            "title": "Resume.js",
+            "description": "Aprés avoir cherché un générateur de CV en ligne, j'ai décidé d'en faire un moi-même en utilisant React/Redux. Puis mis à jour pour être généré puis servi via gatsby",
             "cadre": "Projet personnel",
             "version": "v.0.3.0",
-            "link": "https://github.com/PookMook/Me.js",
+            "link": "https://github.com/PiNinja/Resume",
+            "exemples": [
+              "https://arthur.juchereau.com"
+            ],
             "cardType": "Project"
           },
           {
@@ -462,69 +470,67 @@
             "version": "Exploration",
             "link": "https://github.com/PookMook/Genkidama",
             "cardType": "Project"
-          },
-          {
-            "title": "openRaid",
-            "description": "Gestion de groupe/raid pour le jeu en ligne World of Warcraft",
-            "cadre": "Projet personnel",
-            "version": "v.0.6.0",
-            "link": "https://github.com/PookMook/openRaid",
-            "cardType": "Project"
           }
         ]
       },
       "Divers":{
-        "Hauts faits": [
+        "Accomplissements": [
           {
-            "title": "Tu y es arrivé!",
-            "description": "Réussir à passer au travers du système d'immigration Canadien avec succès",
-            "requis": "Résident permanent Canadien",
+            "title": "Tu y es arrivé !",
+            "description": "Réussir à passer au travers du système d'immigration canadien avec succès",
+            "requis": "Résident permanent canadien",
             "cardType": "Achievement"
           },
           {
-            "title": "The Light of Dawn",
-            "description": "Raid leaded the way in clearing The Burning Crusade and Wrath of the Lich King",
-            "required": "Spend many nights raiding and managing people in World of Warcraft",
+            "title": "SuperBacker",
+            "description": "Chercher les nouveaux projets de technologies, design ou jeux de plateau sur kickstarter",
+            "requis": "Soutenir plus de 70 projets",
             "cardType": "Achievement"
           },
           {
-            "title": "Mod it up",
-            "description": "Modelisator for the Wiwiland Morrowind Moding community.",
-            "required": "Owning a licence of 3DSMax 4",
+            "title": "La lumière de l'aube",
+            "description": "Mener un groupe dans le jeu World of Warcraft, finissant tous les raids des extensions The burning crusade et Wrath of the Lich King",
+            "requis": "Passer de nombreuses nuits à gérer des joueurs de World of Warcraft",
+            "cardType": "Achievement"
+          },
+          {
+            "title": "Mod moi ça",
+            "description": "Modélisateur pour la communauté Wiwiland sur le jeu Morrowind.",
+            "requis": "Avoir accès à une licence 3DSMax 4",
             "cardType": "Achievement"
           },
           {
             "title": "Eyjafjallajökull",
-            "description": "Helped replant a forest in Iceland, lived through the permanent night and day",
-            "required": "Spend 5 months in Iceland",
+            "description": "Participer à un projet d'afforestation en Islande pendant 5 mois",
+            "requis": "Vivre le jour et la nuit de 24 heures",
             "cardType": "Achievement"
           },
           {
             "title": "EuroTrotter",
-            "description": "User of the Interrail unlimited train ticket.",
-            "required": "Visit more than 30 european capitals",
+            "description": "Passer ses étés à voyager via le billet de train interrail.",
+            "requis": "Visiter plus de 30 capitales européennes",
             "cardType": "Achievement"
           }
         ],
-        "Hobbies": [
+        "Passe-temps": [
           {
-            "title": "Sports & Outdoors",
-            "description": "Used to play soccer on a competitive level, after an injury, I had to drop out and play in a casual way. I still play Soccer (back midfield), ride my bike, hike around the parks in Canada and wander in cities.",
+            "title": "Sports et Extérieur",
+            "description": "Plus jeune, je jouais au soccer à un niveau compétitif, puis après une blessure, j'ai dù passer à une pratique de loisir. J'ai toujours aimé les sports collectifs, la marche et les voyages en backpack",
             "cardType": "Hobby"
           },
           {
-            "title": "Gaming",
-            "description": "I like testing the gaming mechanics of different genres and platforms. I've found the competitive part of sports in E-sports, used to play quake3 then CounterStrike, warcraft III and finished my intense gaming with World of Warcraft. Nowadays, i enjoy playing from time to time and test out new mechanics. I have been a huge fan of board games as they give a very good entrance for friends and family who are usually non-gamer people to gather and share a great time (when the dice RNG does like me)",
+            "title": "Jeux",
+            "description": "J'aime tester de nouvelles mécaniques de jeu, qu'il soit question de sports, jeux vidéo ou jeux de plateau puis explorer différents styles de jeu et trouver les meilleures stratégies",
             "cardType": "Hobby"
           },
           {
-            "title": "Tinkering",
-            "description": "I always liked doing stuff with my hands. It started with legos, then shifted to computers later on. Nowadays, I am exploring the wonderful world of 3D printing and Virtual Reality. I am also a \"superbacker\" on kickstater, for the better or worse.",
+            "title": "bricolage",
+            "description": "J'ai toujours aimé concevoir des choses, d'abords en lego puis avec des pièces électronique. Ces derniers temps, je me concentre sur l'impression 3D et la réalité virtuelle.",
             "cardType": "Hobby"
           },
           {
             "title": "Photo/Video",
-            "description": "A cheap Canon 600D for a birthday, then the Nikon D700 from my parents, hooked me into photography. I now own a Canon 6D. Maybe now's time for an upgrade! #GearAquisitionSyndrome. I use my DSLR to shoot concerts, landscape and cities. I also was filming concert as my day job at Canal+ and still do from times to time when friends need a videographer that knows how to record sound. (some of my pictures : http://bit.ly/2u53Dro )",
+            "description": "Après avoir reçu un Canon 600D pour ma fête, puis emprunté le Nikon D700 de mes parents, j'ai été séduit par la photographie numérique. Je possède maintenant un Canon 6D. Je photographie principalement des concerts ainsi que des paysages ruraux et urbains.(ex : http://bit.ly/2u53Dro )",
             "cardType": "Hobby"
           }
         ]
