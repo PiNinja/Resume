@@ -3,40 +3,62 @@ const json = require('./src/data/Resume.json')
 
 // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
-exports.createPages = ({ actions }) => {
-  const { createPage } = actions
-    const templateLang = path.resolve(`src/templates/lang.js`)
-    const templatePage = path.resolve(`src/templates/page.js`)
+exports.createPages = async ({ actions }) => {
+      const { createPage } = actions
+      const templatePage = path.resolve(`src/templates/page.js`)
 
-    // Create pages for each markdown file.
-    const langs = Object.keys(json)
-    console.log("generating",langs)
-    langs.forEach(( lang ) => {
-      const path = lang.toLowerCase()
-      const meta = json[lang].meta
-      const data = json[lang].data
-      createPage({
-        path,
-        component: templateLang,
+      // Create page for / to default language/default section
+
+      const defaultLang = Object.keys(json)[0]
+      const defaultSection = Object.keys(json[defaultLang].data)[0]
+      console.log("Creating Index")
+      const index = await createPage({
+        path:`/`,
+        component: templatePage,
         context: {
-          lang,
-          meta,
-          sections:data
+          lang:defaultLang,
+          meta:json[defaultLang].meta,
+          section:defaultSection,
+          canonical:`/${defaultLang}/${defaultSection.toLowerCase()}`,
+          data:json[defaultLang].data[defaultSection]
         },
-      })
+      });
+      console.log(index)
 
-      Object.keys(data).forEach((section)=>{
+      // Create pages for each lang.
+      const langs = Object.keys(json)
+      langs.forEach(( lang ) => {
+        const path = lang.toLowerCase()
+        const meta = json[lang].meta
+        const data = json[lang].data
+
+        //Creating page for /en and /fr + add canonical ref
+
+        const defaultSection = Object.keys(data)[0];
         createPage({
-          path:`${path}/${section.toLowerCase()}`,
+          path:`/${path}`,
           component: templatePage,
           context: {
             lang,
             meta,
-            section,
-            data:data[section]
+            section:defaultSection,
+            canonical:`/${path}/${defaultSection.toLowerCase()}`,
+            data:data[defaultSection]
           },
         })
-      })
 
+        Object.keys(data).forEach((section)=>{
+          createPage({
+            path:`/${path}/${section.toLowerCase()}`,
+            component: templatePage,
+            context: {
+              lang,
+              meta,
+              section,
+              canonical:`/${path}/${section.toLowerCase()}`,
+              data:data[section]
+            },
+          })
+        })
     })
 }

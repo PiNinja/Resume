@@ -21,6 +21,7 @@ const SEO = (props) => (
             const meta = props.meta || {}
             let title = meta.name || seo.title;
             title = props.section? title +' | '+props.section:title;
+            const canonical = props.canonical || '/';
             const description = meta.summary || seo.description;
             const url = props.siteUrl || seo.siteUrl;
             const image = props.image || seo.image;
@@ -32,6 +33,7 @@ const SEO = (props) => (
                     <title>{title}</title>
                     <meta name="description" content={description} />
                     <meta name="image" content={image} />
+                    <link rel="canonical" href={canonical} />
                     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
                     {/* OpenGraph tags */}
